@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/myinfo_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusableInTouchMode="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="115.0dip"
+                    android:background="@color/bg_blue">
+
+                    <LinearLayout
+                        android:id="@+id/uio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/lr_read_card"
+                            android:layout_width="82.0dip"
+                            android:layout_height="82.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/bg_blue">
+
+                            <ImageView
+                                android:id="@+id/iv_read_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5.0dip"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/ic_main_read_card" />
+
+                            <TextView
+                                android:id="@+id/tv_read_card"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_read_card"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="3.0dip"
+                                android:gravity="center_horizontal"
+                                android:text="读余额"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lr_yuncard"
+                            android:layout_width="82.0dip"
+                            android:layout_height="82.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/bg_blue">
+
+                            <ImageView
+                                android:id="@+id/iv_yuncard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5.0dip"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/ic_main_cloud_card" />
+
+                            <TextView
+                                android:id="@+id/tv_yuncard"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_yuncard"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="3.0dip"
+                                android:gravity="center_horizontal"
+                                android:text="电子卡"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lr_voucher"
+                            android:layout_width="82.0dip"
+                            android:layout_height="82.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/bg_blue">
+
+                            <ImageView
+                                android:id="@+id/iv_voucher"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5.0dip"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/ic_main_quick_charge" />
+
+                            <TextView
+                                android:id="@+id/tv_voucher"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_voucher"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="3.0dip"
+                                android:gravity="center_horizontal"
+                                android:text="快充券"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_combo_ticket"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dynamic_grid"
+                    android:layout_marginBottom="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="48.0dip"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/space_16"
+                            android:drawableLeft="@mipmap/ic_combo_ticket_mark"
+                            android:drawablePadding="5.0dip"
+                            android:gravity="center"
+                            android:text="合作景点套票"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_more_combo_ticket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10.0dip"
+                            android:drawableRight="@mipmap/ic_combo_ticket_more"
+                            android:gravity="center"
+                            android:text="查看全部"
+                            android:textSize="13.0sp" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcy_combo_ticket_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_16"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/space_16"
+                        android:paddingRight="@dimen/space_16" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_news"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_main_new"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_point_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/ic_main_point_sound"
+                android:drawablePadding="5.0dip"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="40.0dip"
+                android:singleLine="true"
+                android:text="消息通知"
+                android:textColor="@color/white"
+                android:textSize="12.0dip" />
+
+            <ImageView
+                android:id="@+id/img_close_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="10.0dip"
+                android:src="@mipmap/ic_main_new_delete" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

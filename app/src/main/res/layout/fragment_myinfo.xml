@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/myinfo_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:background="#ffe6e6e6"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_heightPercent="100%h"
+            app:layout_widthPercent="100%w">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/my_setting_ll"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_heightPercent="15%h"
+                app:layout_widthPercent="100%w">
+
+                <TextView
+                    android:id="@+id/tv_logo_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:background="@mipmap/ic_material_logo_small_round_info" />
+
+                <TextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@id/tv_logo_show"
+                    android:lines="1"
+                    android:textColor="@color/myinfo_uername_tv"
+                    android:textSize="@dimen/font_17" />
+
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:drawableRight="@mipmap/ic_net_ponit_go_map" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/space_16"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/myinfo_bonuspoint_rl"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                app:layout_heightPercent="13%h"
+                app:layout_widthPercent="100%w">
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.0dip"
+                        android:text=" 积分"
+                        android:textColor="#ff999999"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:id="@+id/myinfo_bonuspoint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6.0dip"
+                        android:drawablePadding="6.0dip"
+                        android:drawableRight="@mipmap/ic_myinfo_mypoints"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/font_17" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <TextView
+                    style="@style/about_right_drawable"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.7" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_heightPercent="9%h"
+                app:layout_widthPercent="100%w">
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/my_information_check_in"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_myinfo_checkin"
+                        android:drawablePadding="8.0dip"
+                        android:gravity="center"
+                        android:text="签到"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/myinfo_bg" />
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/rl_myinfo_mall"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_myinfo_mall"
+                        android:drawablePadding="8.0dip"
+                        android:gravity="center"
+                        android:text="商城"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/myinfo_bg" />
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/rl_myinfo_xinghuoban"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_myinfo_sign"
+                        android:drawablePadding="@dimen/space_8"
+                        android:gravity="center"
+                        android:text="活动"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/space_0.5"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_myinfo_account_toast"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_heightPercent="11%h"
+                app:layout_widthPercent="100%w">
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/myinfo_money_name_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:src="@mipmap/iv_myinfo_myself" />
+
+                    <TextView
+                        android:id="@+id/myinfo_money_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_toRightOf="@id/myinfo_money_name_iv"
+                        android:text="个人账户"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="5.0dip" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/assets_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50.0dip"
+                        android:maxLength="10"
+                        android:text="--"
+                        android:textColor="#ff1e81d2"
+                        android:textSize="@dimen/font_17" />
+
+                    <CheckBox
+                        android:id="@+id/hide_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@xml/checkbox_click_hide" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/white"
+                app:layout_heightPercent="8%h"
+                app:layout_widthPercent="100%w">
+
+                <RelativeLayout
+                    android:id="@+id/rl_account"
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <ImageView
+                        android:id="@+id/iv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:src="@mipmap/ic_myinformation_account" />
+
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_toRightOf="@id/iv_account"
+                        android:text="企业账户"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        style="@style/about_right_drawable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.7" />
+
+                    <View
+                        android:layout_width="@dimen/space_0.5"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/myinfo_bg" />
+                </RelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/white"
+                app:layout_heightPercent="8%h"
+                app:layout_widthPercent="100%w">
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_card"
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <ImageView
+                        android:id="@+id/iv_account_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:src="@mipmap/ic_myinformation_card" />
+
+                    <TextView
+                        android:id="@+id/tv_account_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_toRightOf="@id/iv_account_card"
+                        android:text="会员卡"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        style="@style/about_right_drawable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignBaseline="@id/tv_account_card"
+                        android:layout_alignBottom="@id/tv_account_card"
+                        android:layout_alignParentStart="true"
+                        android:layout_weight="0.7" />
+                </RelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                app:layout_heightPercent="8%h"
+                app:layout_widthPercent="100%w">
+
+                <RelativeLayout
+                    android:id="@+id/rl_pay_method"
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_pay_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:src="@mipmap/iv_pay_channel_setting" />
+
+                    <TextView
+                        android:id="@+id/tv_pay_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_toRightOf="@id/iv_pay_method"
+                        android:text="支付方式"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        style="@style/about_right_drawable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.7" />
+
+                    <View
+                        android:layout_width="@dimen/space_0.5"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/myinfo_bg" />
+                </RelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/myinfo_bg" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="16.0dip"
+                app:layout_heightPercent="8%h"
+                app:layout_widthPercent="100%w">
+
+                <RelativeLayout
+                    android:id="@+id/rl_error_card"
+                    android:layout_width="@dimen/space_0"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_error_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:src="@mipmap/ic_terminal_query" />
+
+                    <TextView
+                        android:id="@+id/tv_error_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_toRightOf="@id/iv_error_card"
+                        android:text="异常卡处理"
+                        android:textColor="@color/myinf_top3_mall_bg"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        style="@style/about_right_drawable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.7" />
+
+                    <View
+                        android:layout_width="@dimen/space_0.5"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/myinfo_bg" />
+                </RelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/enopen_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/space_330"
+            android:layout_marginTop="@dimen/space_80"
+            android:background="#a0000000"
+            android:visibility="invisible">
+
+
+        </RelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</LinearLayout>
